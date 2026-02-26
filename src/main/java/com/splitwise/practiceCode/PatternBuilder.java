@@ -67,4 +67,52 @@ public class PatternBuilder {
         }
     }
 
+    public static void diamondPattern(int n){
+        //Write a program that prints a diamond star pattern for a given odd integer N (height of the upper
+        int i=1;
+        while(i<=n){
+            for(int j=0;j<n-i;j++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<i*2-1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+            i++;
+        }
+        i-=2;
+        while(i>0){
+            for(int j=0;j<n-i;j++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<i*2-1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+            i--;
+        }
+    }
+
+    public static void hollowSquare(int n){
+        //Write a program that prints a hollow square star pattern of size N × N. Only the border should contain stars; the inside should contain spaces.
+        int i=0;
+        while(i<n){
+            if(i==0 || i == n-1){
+                for(int j=0;j<n;j++){
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }else{
+                for(int j=0;j<n;j++){
+                    if(j==0 || j==n-1){
+                        System.out.print("* ");
+                    }else{
+                        System.out.print("  ");
+                    }
+                }
+                System.out.println();
+            }
+            i++;
+        }
+    }
 }
