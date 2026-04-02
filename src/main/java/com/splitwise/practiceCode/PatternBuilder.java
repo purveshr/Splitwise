@@ -139,4 +139,30 @@ public class PatternBuilder {
 
 
     }
+
+    public static void plusPattern(int n){
+//        3. Plus Pattern
+//        Constraints:
+//        1 ≤ n ≤ 99, n must be odd. If even → print "Invalid input" or handle gracefully, Middle row & column fully filled
+        if(n%2==0){
+            System.out.println("Enter a odd number");
+            return;
+        }
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(i!= n/2) {
+                    if (j < n / 2) {
+                        System.out.print("  ");
+                    } else {
+                        System.out.print(" *");
+                        break;
+                    }
+                }else{
+                    System.out.print(" *");
+                }
+            }
+            System.out.println();
+        }
+    }
 }
