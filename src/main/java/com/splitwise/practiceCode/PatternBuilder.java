@@ -10,7 +10,7 @@ public class PatternBuilder {
             for (int j = 1; j <= i; j++) {
                 System.out.print("* ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 
@@ -19,7 +19,7 @@ public class PatternBuilder {
             for(int j=0;j<n;j++){
                 System.out.print("* ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 
@@ -114,5 +114,29 @@ public class PatternBuilder {
             }
             i++;
         }
+    }
+
+    public static void xPattern(int n){
+//        X Pattern
+//        Constraints:
+//        1 ≤ n ≤ 100
+//        n can be odd or even
+//        Stars only at:
+//        i == j
+//        i + j == n - 1
+        for(int i = 0; i<n; i++){
+            int j=0;
+            while(j<n){
+                if(i==j || i+j == n-1){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+                j++;
+            }
+            System.out.println();
+        }
+
+
     }
 }
